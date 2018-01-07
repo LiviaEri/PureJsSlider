@@ -150,4 +150,53 @@ header nav ul {
 .slide-next:before {
   content: "\f105";
 }
+
+/* FOOTER */
+footer {
+  padding: 0 20px;
+  background: #222;
+  color: white;
+}
+
+footer > div {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 520px) {
+  footer > div {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+footer p {
+  margin-bottom: 0;
+}
+
+footer, footer a {
+  color: white;
+  line-height: 2;
+}
+
+footer a {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+footer a:hover, footer a:not([href]):not([tabindex]):hover {
+  color: #ddd;
+  text-decoration: none;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+footer ul li + li {
+  margin-left: 1rem;
+}
 /*# sourceMappingURL=style.css.map */
