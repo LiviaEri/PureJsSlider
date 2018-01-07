@@ -128,10 +128,31 @@ footer {
     >div {
         max-width: 1200px;
         margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
+        @media only screen and (min-width: 520px) {
+            display: flex;
+            justify-content: space-between;
+        }
     }
-    p, ul {
+    p {
         margin-bottom: 0;
+    }
+    &, a {
+        color: white;
+        line-height: 2;
+    }
+    a {
+        cursor: pointer;
+        transition: color 0.3s ease;
+        &:hover, &:not([href]):not([tabindex]):hover {
+            color: #ddd;
+            text-decoration: none;
+        }
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        li + li { margin-left: 1rem; }
     }
 }
