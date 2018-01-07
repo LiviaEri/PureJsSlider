@@ -2,6 +2,7 @@ var App = {
     init: function () {
         console.log("app starting");
         App.Slider.init();
+        App.Menu.init();
     },
     Slider: {
         numberOfSlides: 0,
@@ -36,6 +37,18 @@ var App = {
                 nextSlide = 0;
             }
             App.Slider.animate(nextSlide);
+        },
+    },
+    Menu: {
+        init: function () {
+            document.querySelector('header .menu-control').addEventListener('click', App.Menu.openClose);
+        },
+        openClose: function () {
+            var header = document.querySelector('header');
+            var span = document.querySelector('header .menu-control span');
+            header.classList.toggle('menu-open');
+            span.classList.toggle('fa-close');
+            span.classList.toggle('fa-bars');
         },
     },
 };
