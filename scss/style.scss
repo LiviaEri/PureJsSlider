@@ -1,3 +1,54 @@
+/* HEADER */
+
+header {
+    padding: 0 20px;
+    background: #222;
+    >div {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    &, a {
+        color: white;
+        line-height: 2;
+    }
+    a {
+        cursor: pointer;
+        transition: color 0.3s ease;
+        &:hover, &:not([href]):not([tabindex]):hover {
+            color: #ddd;
+            text-decoration: none;
+        }
+    }
+    nav {
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+    }
+    @media only screen and (min-width: 480px) {
+        .menu-control { display: none; }
+        nav ul {
+            display: flex;
+            justify-content: space-between;
+            li + li { margin-left: 1rem; }
+        }
+    }
+
+    @media only screen and (max-width: 479px) {
+        nav {
+            text-align: right;
+            ul { display: none; }
+        }
+        &.menu-open nav ul { display: block; }
+    }
+
+}
+
+/* SLIDER */
+
 .slider {
     overflow: hidden;
     position: relative;
@@ -14,7 +65,7 @@
 .slide {
     width: 100%;
     height: 500px;
-    padding: 0 20px;
+    padding: 0 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -31,6 +82,10 @@
         :last-child {
             margin-bottom: 0;
         }
+    }
+    @media only screen and (max-width: 479px) {
+        height: 300px;
+        font-size: 1.5em;
     }
 }
 .slide-1 { background-image: url("https://picsum.photos/1600/500"); }
