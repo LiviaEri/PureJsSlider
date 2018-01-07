@@ -118,3 +118,20 @@ header {
         content: "\f105";
     }
 }
+
+/* FOOTER */
+
+footer {
+    padding: 0 20px;
+    background: #222;
+    color: white;
+    >div {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    p, ul {
+        margin-bottom: 0;
+    }
+}
