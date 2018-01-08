@@ -151,6 +151,44 @@ header nav ul {
   content: "\f105";
 }
 
+/* ACCORDION */
+.accordion-block {
+  padding: 0 20px;
+}
+
+.accordion-block > div {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.accordion-block .accordion-item .accordion-heading {
+  background: #222;
+  padding: 5px 20px;
+  color: white;
+  cursor: pointer;
+}
+
+.accordion-block .accordion-item .accordion-heading .fa {
+  float: right;
+  margin-top: 4px;
+  pointer-events: none;
+}
+
+.accordion-block .accordion-item .accordion-text {
+  padding: 10px 20px;
+  border: 1px solid #222;
+  display: none;
+}
+
+.accordion-block .accordion-item + .accordion-item {
+  margin-top: 5px;
+}
+
+.accordion-block .accordion-item.open .accordion-text {
+  display: block;
+}
+
 /* FOOTER */
 footer {
   padding: 0 20px;

@@ -3,6 +3,7 @@ var App = {
         console.log("app starting");
         App.Slider.init();
         App.Menu.init();
+        App.Accordion.init();
     },
     Slider: {
         numberOfSlides: 0,
@@ -51,6 +52,29 @@ var App = {
             span.classList.toggle('fa-bars');
         },
     },
+
+    Accordion: {
+        init: function () {
+            var headings = document.querySelectorAll('.accordion-heading');
+            headings.forEach(function (heading) {
+                heading.addEventListener('click', App.Accordion.openClose);
+            });
+        },
+
+        openClose: function (event) {
+            var item = event.target.parentNode;
+            var span = event.target.querySelector('span');
+            item.classList.toggle('open');
+            if (item.classList.contains('open')) {
+                span.classList.remove('fa-plus');
+                span.classList.add('fa-minus');
+            } else {
+                span.classList.remove('fa-minus');
+                span.classList.add('fa-plus');
+            }
+        },
+    },
+
 };
 
 App.init();

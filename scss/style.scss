@@ -119,6 +119,39 @@ header {
     }
 }
 
+/* ACCORDION */
+
+.accordion-block {
+    padding: 0 20px;
+    >div {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px 0;
+    }
+    .accordion-item {
+        .accordion-heading {
+            background: #222;
+            padding: 5px 20px;
+            color: white;
+            cursor: pointer;
+            .fa {
+                float: right;
+                margin-top: 4px;
+                pointer-events: none;
+            }
+        }
+        .accordion-text {
+            padding: 10px 20px;
+            border: 1px solid #222;
+            display: none;
+        }
+    }
+    .accordion-item + .accordion-item { margin-top: 5px; }
+    .accordion-item.open {
+        .accordion-text { display: block; }
+    }
+}
+
 /* FOOTER */
 
 footer {
